@@ -1,6 +1,11 @@
 <?php
     $len = intval($_GET['length']);
-    require './partials/functions.php'
+    require './partials/functions.php';
+    $password = generatePassword($len);
+    var_dump($password);
+
+    session_start();
+    $_SESSION['password'] = $password;
 ?>
 
 <!DOCTYPE html>
@@ -34,11 +39,11 @@
                 <div class="col-auto">
                     <label for="inputPassword" class="col-form-label">Lunghezza Password</label>
                 </div>
-            <div class="col-auto">
-                <input type="text" id="inputPassword" class="form-control" name="length">
+                <div class="col-auto">
+                    <input type="text" id="inputPassword" class="form-control" name="length">
+                </div>
             </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Invia</button>
+            <a href="password.php" type="submit" class="btn btn-primary">Invia</a>
             <button type="reset" class="btn btn-secondary">Annulla</button>
         </form>        
     </div>
