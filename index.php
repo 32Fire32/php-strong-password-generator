@@ -34,7 +34,7 @@
                     } ?> 
             </p>
         </div>
-        <form action="index.php" method="GET" class="form-control my-5">
+        <form action="password.php" method="GET" class="form-control my-5">
             <div class="row g-3 align-items-center my-5">
                 <div class="col-auto">
                     <label for="inputPassword" class="col-form-label">Lunghezza Password</label>
@@ -43,8 +43,32 @@
                     <input type="text" id="inputPassword" class="form-control" name="length">
                 </div>
             </div>
-            <a href="password.php" type="submit" class="btn btn-primary">Invia</a>
-            <button type="reset" class="btn btn-secondary">Annulla</button>
+            <div class="characters">
+                <h5>Quali caratteri vuoi usare?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="words" value="words" id="words">
+                    <label class="form-check-label" for="words">
+                        Lettere
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="numbers" value="numbers" id="numbers">
+                    <label class="form-check-label" for="numbers">
+                        Numeri
+                    </label>
+                </div>
+                <div class="form-check mb-5">
+                    <input class="form-check-input" type="checkbox" name="symbols" value="symbols" id="symbols">
+                    <label class="form-check-label" for="symbols">
+                        Simboli
+                    </label>
+                </div>
+            </div>                
+            <div class="buttons">
+               <!-- <a href="password.php">Invia a pagina</a> -->
+               <button type="submit" class="btn btn-primary"> Invia</button> 
+               <button type="reset" class="btn btn-secondary">Annulla</button> 
+            </div>           
         </form>        
     </div>
 </body>
