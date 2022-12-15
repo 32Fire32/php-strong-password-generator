@@ -28,13 +28,13 @@
         <div class="mt-5 text-center">
             <p>
                 <?php if(!empty($len)) { 
-                    echo generatePassword($len);
+                     header("Location: password.php");
                     } else { 
                         echo 'Nessun parametro valido inserito';
                     } ?> 
             </p>
         </div>
-        <form action="password.php" method="GET" class="form-control my-5">
+        <form action="index.php" method="GET" class="form-control my-5">
             <div class="row g-3 align-items-center my-5">
                 <div class="col-auto">
                     <label for="inputPassword" class="col-form-label">Lunghezza Password</label>
@@ -65,8 +65,8 @@
                 </div>
             </div>                
             <div class="buttons">
-               <!-- <a href="password.php">Invia a pagina</a> -->
-               <button type="submit" class="btn btn-primary"> Invia</button> 
+               <a type="submit" href="password.php">Invia a pagina</a>
+                  <button type="submit" class="btn btn-primary">Invia</button> 
                <button type="reset" class="btn btn-secondary">Annulla</button> 
             </div>           
         </form>        
